@@ -10,7 +10,6 @@ const get_user = async (req: Request, res: Response) => {
         }
     )
     await user.save();
-    console.log("chegou aqui")
     res.json({"message": "sucesso"})
 }
 
