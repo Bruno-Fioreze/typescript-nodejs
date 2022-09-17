@@ -1,12 +1,9 @@
 import { Router } from 'express';
-import { get_user } from '../controller/user'
+import { list_user, post_user } from '../controller/user'
 
 const routes = Router();
 
-routes.get("/", get_user);
+routes.get("/users/", list_user);
+routes.post("/users/", post_user);
 
 export default routes
-
-const handleError = (err: string) => {
-  console.log(err)
-}

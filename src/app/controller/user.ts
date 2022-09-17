@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { User } from "../models/user"
 
-const get_user = async (req: Request, res: Response) => {
+const post_user = async (req: Request, res: Response) => {
     const user = new User(
         {
             name: 'Bill',
@@ -13,4 +13,10 @@ const get_user = async (req: Request, res: Response) => {
     res.json({"message": "sucesso"})
 }
 
-export { get_user };
+const list_user = async (req: Request, res: Response) => {
+    const users = await User.find({}) 
+    res.json(users)
+}
+
+
+export { post_user, list_user };
