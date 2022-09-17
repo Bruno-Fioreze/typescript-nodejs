@@ -6,11 +6,6 @@ export default function connectToMongoDB(): void {
     if (MONGOURI) {
         mongoose.connect(
             MONGOURI,
-            {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-                useFindAndModify: false
-            },
             () => console.log("Connected to MongoDB")
         )
     } else {
