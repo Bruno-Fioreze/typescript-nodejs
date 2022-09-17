@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  my-mongodb:
+    image: mongo:4.2.3-bionic
+    container_name: my-mongodb
+    ports:
+      - 27017:27017
